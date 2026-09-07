@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloxStore - Toko Roblox Terpercaya</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        header {
+            background-color: #1e293b;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #334155;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .section-title {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            border-left: 4px solid #38bdf8;
+            padding-left: 0.5rem;
+        }
+        .form-section {
+            background-color: #1e293b;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex: 1;
+            min-width: 250px;
+        }
+        .input-group label {
+            font-weight: bold;
+            color: #94a3b8;
+        }
+        .input-group input, .input-group select {
+            padding: 0.75rem;
+            border-radius: 6px;
+            border: 1px solid #334155;
+            background-color: #0f172a;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            width: 100%;
+        }
+        .input-group input:focus, .input-group select:focus {
+            border-color: #38bdf8;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background-color: #1e293b;
+            border-radius: 8px;
+            padding: 1.25rem;
+            border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            background-color: #0f172a;
+        }
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            min-height: 44px;
+        }
+        .card .price {
+            color: #4ade80;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .btn {
+            background-color: #0284c7;
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+            width: 100%;
+        }
+        .btn:hover {
+            background-color: #0369a1;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">BloxStore 🎮</div>
+        <div>Toko Jual Beli Roblox Terpercaya</div>
+    </header>
+
+    <div class="container">
+        <!-- FORM DATA PEMBELI & METODE PEMBAYARAN -->
+        <div class="form-section">
+            <div class="input-group">
+                <label for="usernameRoblox">Username / Nama Roblox:</label>
+                <input type="text" id="usernameRoblox" placeholder="Contoh: RobloxGamer123" required>
+            </div>
+            <div class="input-group">
+                <label for="metodeBayar">Metode Pembayaran:</label>
+                <select id="metodeBayar">
+                    <option value="QRIS (All Payment)">QRIS (All Payment)</option>
+                    <option value="DANA">DANA</option>
+                    <option value="Gopay">Gopay</option>
+                    <option value="OVO">OVO</option>
+                    <option value="Transfer Bank (BCA/Mandiri/BRI)">Transfer Bank (BCA/Mandiri/BRI)</option>
+                </select>
+            </div>
+        </div>
+
+        <h2 class="section-title">Katalog Produk</h2>
+        
+        <div class="grid">
+            <!-- Produk 1 -->
+            <div class="card">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1538481527238-41529a0eea12?w=400&h=300&fit=crop" alt="Robux">
+                    <h3>1.000 Robux (Via Gamepass)</h3>
+                    <div class="price">Rp 120.000</div>
+                </div>
+                <button class="btn" onclick="beliProduk('1.000 Robux (Via Gamepass)', '120.000')">Beli Sekarang</button>
+            </div>
+
+            <!-- Produk 2 -->
+            <div class="card">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1535745675d5-6a6c0f2d4f6e?w=400&h=300&fit=crop" alt="Blox Fruits">
+                    <h3>Akun Blox Fruits (Max Level)</h3>
+                    <div class="price">Rp 85.000</div>
+                </div>
+                <button class="btn" onclick="beliProduk('Akun Blox Fruits (Max Level)', '85.000')">Beli Sekarang</button>
+            </div>
+
+            <!-- Produk 3 -->
+            <div class="card">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop" alt="Pet Simulator">
+                    <h3>Huge Pet (Pet Simulator X)</h3>
+                    <div class="price">Rp 50.000</div>
+                </div>
+                <button class="btn" onclick="beliProduk('Huge Pet (Pet Simulator X)', '50.000')">Beli Sekarang</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Nomor WhatsApp Anda tetap terpasang aman
+        const nomorWA = "082159014814";
+
+        function beliProduk(namaProduk, harga) {
+            const username = document.getElementById('usernameRoblox').value.trim();
+            const pembayaran = document.getElementById('metodeBayar').value;
+
+            // Validasi input username
+            if (username === "") {
+                alert("Silakan masukkan Username Roblox Anda terlebih dahulu!");
+                document.getElementById('usernameRoblox').focus();
+                return; 
+            }
+
+            // Menyusun format pesan WhatsApp yang rapi dan profesional
+            const pesan = `Halo Admin BloxStore, saya mau order item Roblox 🎮\n\n` +
+                          `*📦 Produk:* ${namaProduk}\n` +
+                          `*💰 Harga:* Rp ${harga}\n\n` +
+                          `*👤 Detail Pembeli:*\n` +
+                          `- Username Roblox: ${username}\n` +
+                          `- Metode Bayar: ${pembayaran}\n\n` +
+                          `Mohon segera diproses ya Min, terima kasih!`;
+            
+            const url = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+</html>
